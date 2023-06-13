@@ -1,0 +1,23 @@
+LeetCode Daily Task 2352: "Equal Row and Column Pairs" - Three Different Solutions
+
+In this LeetCode task[https://leetcode.com/problems/equal-row-and-column-pairs/], we are given a binary matrix, and the goal is to count the number of pairs of rows and columns that have the same values. I have solved this problem using three different approaches.
+
+Solution 1: Brute Force Approach
+
+In the first solution, I used a brute force approach. I compared all pairs of rows and columns. If a row was equal to a column, I incremented the answer by one. This approach has a time complexity of O(n^3) and uses O(1) memory. Code[https://github.com/naeem4265/Coding/blob/master/Leet%20code%20oj/equal-row-and-column-pairs.cpp]
+
+
+
+Solution 2: Hashing Approach
+
+In the second solution, I employed hashing. I converted each row into a single integer value and stored it in a map. Then, I converted each column into a single integer value and counted how many times it appeared in the map. I increased the answer by the count. This approach has a time complexity of O(n^2 * log n) and uses O(n) memory. Code[https://github.com/naeem4265/Coding/blob/master/Leet%20code%20oj/Hashing/equal-row-and-column-pairs.cpp]
+
+
+
+Solution 3: Trie Approach
+
+In the third solution, I utilized a Trie data structure. I built a trie for each row, and for multiple children, I used an unordered map since the child values could be a maximum of 10^5, which would exceed the memory limit for a regular array. Then, I checked every column against the trie and counted the number of times the column appeared in the trie. I incremented the answer by the count. This approach has a time complexity of O(n^2) and uses O(n^2) memory. Code[https://github.com/naeem4265/Coding/blob/master/Leet%20code%20oj/Trie/equal-row-and-column-pairs.cpp]
+
+
+
+These are the three different solutions I used to solve the LeetCode task 2352, "Equal Row and Column Pairs." Each approach has its own time and memory complexities, providing different trade-offs between efficiency and resource usage.
